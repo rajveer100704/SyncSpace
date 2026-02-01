@@ -1,0 +1,64 @@
+@import 'tailwindcss';
+@import '@repo/ui/styles/default.css';
+@import "@repo/ui/styles.css";
+/**
+ * Tailwind CSS official document:
+ * https://tailwindcss.com/docs/detecting-classes-in-source-files
+ *
+ * if you ever need to explicitly add a source that's excluded by default, 
+ * you can always add it with the @source directive.
+ */
+@source "../../../node_modules/@repo/ui";
+
+.caveat {
+  font-family: var(--font-caveat);
+}
+
+.virgil {
+  font-family: var(--font-virgil);
+}
+
+.excalifont {
+  font-family: var(--font-excalifont);
+}
+
+@keyframes backdropBlurFadeIn {
+  0% {
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0px);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+  }
+}
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes modalFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-backdrop {
+  animation: backdropBlurFadeIn 0.35s ease forwards;
+}
+nextjs-portal {
+  display: none;
+}
+.modal-content {
+  animation: modalFadeIn 0.3s ease forwards;
+}

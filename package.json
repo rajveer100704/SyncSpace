@@ -1,0 +1,23 @@
+{
+  "name": "drawdeck",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "check-types": "turbo run check-types",
+    "start:ws": "cd apps/ws && pnpm run start",
+    "start:rtc": "cd apps/rtc && pnpm run start",
+    "start:client": "cd apps/DrawDeck && pnpm run start"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3",
+    "turbo": "^2.5.0",
+    "typescript": "5.8.2"
+  },
+  "packageManager": "pnpm@10.0.0",
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "ws-backend",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm run build && pnpm run start",
+    "build": "tsc -b",
+    "start": "node ./dist/index.js"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^25.1.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@repo/backend-common": "workspace:*",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/ws": "^8.18.1",
+    "cookie": "^1.0.2",
+    "dotenv": "^17.2.1",
+    "ioredis": "^5.9.2",
+    "jsonwebtoken": "^9.0.2",
+    "ws": "^8.18.2"
+  }
+}
