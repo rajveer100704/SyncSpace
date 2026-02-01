@@ -62,9 +62,6 @@ This starts the full stack: Frontend, WebSocket Server, RTC Server, and Redis.
 ```bash
 docker compose up --build
 ```
-* Frontend: **[http://localhost:3000](http://localhost:3000)**
-* WS Server: **ws://localhost:8080**
-* RTC Signaling: **[http://localhost:8081](http://localhost:8081)**
 
 ### Manual Start
 If you prefer running services individually (requires local Redis instance):
